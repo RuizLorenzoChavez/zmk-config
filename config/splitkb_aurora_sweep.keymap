@@ -34,7 +34,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -45,7 +45,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
         clt: custom_layer_tap {
@@ -103,7 +103,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&kp LC(BSPC)>,;
+            bindings = <&kp BSPC>, <&kp LC(BSPC)>;
         };
     };
     
@@ -213,7 +213,7 @@
             //          `--------------'                           `--------------'
             bindings = <
             &kp F10 &kp F9 &kp F8 &kp F7 &kp F6 &trans &trans &trans &trans &trans
-            &kp F1 &kk F2 &kp F3 &kp F4 &kp F5  &trans &trans &trans &trans &trans
+            &kp F1 &kp F2 &kp F3 &kp F4 &kp F5  &trans &trans &trans &trans &trans
             &trans &trans &trans &kp F11 &kp F12    &trans &trans &trans &trans &trans
             &trans &trans &trans &trans
             >;
