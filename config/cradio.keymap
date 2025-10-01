@@ -57,6 +57,20 @@
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>; 
         };
 
+        // ABC MOD MORPH
+        quest: question_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&per_com>, <&kp QMARK>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+        exclam: exclamation_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&per_com>, <&kp EXCL>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
     };
 
     conditional_layers {
