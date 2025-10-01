@@ -61,13 +61,13 @@
         quest: question_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&per_com>, <&kp QMARK>;
+            bindings = <&kp DOT>, <&kp QMARK>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
         exclam: exclamation_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&per_com>, <&kp EXCL>;
+            bindings = <&kp DOT>, <&kp EXCL>;
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
