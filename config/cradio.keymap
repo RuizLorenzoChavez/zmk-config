@@ -58,18 +58,12 @@
         };
 
         // ABC MOD MORPH
-        exclam: question_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-        };
-        quest: exclamation_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&per_com>, <&exclam>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
+       brack: bracket_morph {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&close_b>, <&open_b>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+       };
 
     };
 
@@ -88,7 +82,7 @@
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &qt_col
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
-            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &close_b        &open_b         &quest
+            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &close_b        &open_b         &brack
                                                                 &lt 2 TAB           &kp SPACE               &kp ENTER       &lt 1 BSPC
             >;
         };
