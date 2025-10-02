@@ -35,12 +35,6 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
         };
-
-        back_ln: backline_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>, <&maro_release &kp LSHFT>;
-        };
     };
 
     behaviors {
@@ -138,10 +132,18 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
+            bindings = <&kp BSPC>, <&back_wrd>;
         };
 
         // THUMB CLUSTERS LAYER TAP
+        ntap: nav_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&bkd>;
+            display-name = "Layer-Tap";
+        };
         
 
     };
@@ -162,7 +164,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &lt FUN TAB         &lt NUM SPACE           &lt SYM ENTER   &bkd
+                                                                &lt FUN TAB         &lt NUM SPACE           &lt SYM ENTER   &ntap NAV 0
             >;
         };
 
