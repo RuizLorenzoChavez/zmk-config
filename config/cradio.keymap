@@ -29,6 +29,20 @@
         };
     };
 
+    macros {
+        back_wrd: backword_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
+        };
+
+        back_ln: backline_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LSHFT>, <&macro_tap &kp HOME &kp BSPC>, <&macro_release &kp LCTRL &kp LSHFT>;
+        };
+    };
+
     behaviors {
         // HOME ROW BEHAVIORS
         hml: home_row_mod_left {
@@ -120,9 +134,15 @@
         };
 
         // THUMB CLUSTER TAP DANCE
-
+        bkd: backspace_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
+        };
 
         // THUMB CLUSTERS LAYER TAP
+        
 
     };
 
@@ -142,7 +162,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &lt FUN TAB         &lt NUM SPACE           &lt SYM ENTER   &lt NAV BSPC
+                                                                &lt FUN TAB         &lt NUM SPACE           &lt SYM ENTER   &lt NAV bkd
             >;
         };
 
