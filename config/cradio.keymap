@@ -39,7 +39,7 @@
         back_ln: backline_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL &kp LSHFT>, <&macro_tap &kp HOME &kp BSPC>, <&macro_release &kp LCTRL &kp LSHFT>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHFT>, <&macro_tap &kp HOME &kp BSPC>, <&macro_release &kp LCTRL>, <&maro_release &kp LSHFT>;
         };
     };
 
