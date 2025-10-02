@@ -35,6 +35,12 @@
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
         };
+
+        front_wrd: frontword_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
+        };
     };
 
     behaviors {
@@ -131,8 +137,17 @@
         bkd: backspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <120>;
             bindings = <&kp BSPC>, <&back_wrd>;
+        };
+
+         ftd: frontspace_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <120>;
+            bindings = <&kp TAB>, <&front_wrd>;
         };
 
         // THUMB CLUSTERS LAYER TAP
@@ -142,6 +157,15 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&bkd>;
+            display-name = "Layer-Tap";
+        };
+
+        ftap: fun_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
         
