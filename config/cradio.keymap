@@ -14,6 +14,21 @@
 #define BLU 5
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        left_esc {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&kp ESC>;
+        };
+
+        right_esc {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&kp ESC>;
+        };
+    };
+
     behaviors {
         // HOME ROW BEHAVIORS
         hml: home_row_mod_left {
@@ -52,11 +67,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp DQT>;
         };
+
+        // ABC MORPH MOD
         marks: marks_dance {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
             bindings = <&kp FSLH>, <&kp EXCL>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         // NUM TAP DANCE
@@ -72,6 +89,36 @@
             tapping-term-ms = <200>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
         };
+
+        // NAV TAP DANCE
+        sup_lf: left_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>; 
+        };
+
+        sup_rt: right_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RIGHT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>; 
+        };
+
+        sup_up: up_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp UP>, <&kp LS(LC(HOME))>, <&kp LS(LC(PG_UP))>; 
+        };
+
+        sup_dn: up_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOWN>, <&kp LS(LC(END))>, <&kp LS(LC(PG_DN))>; 
+        };
+
         // THUMB CLUSTER TAP DANCE
 
 
@@ -94,7 +141,7 @@
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
-            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &uno            &duo            &marks
+            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
                                                                 &lt FUN TAB         &lt NUM SPACE           &lt SYM ENTER   &lt NAV BSPC
             >;
         };
@@ -122,9 +169,9 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &trans          &trans          &trans              &trans              &trans                  &kp LC(X)       &kp HOME        &kp UP          &kp PG_UP       &kp LC(A)
-            &trans          &trans          &trans              &trans              &trans                  &kp LC(C)       &kp LEFT        &kp DOWN        &kp RIGHT       &none
-            &trans          &trans          &trans              &trans              &trans                  &kp PSCRN       &kp END         &kp DEL         &kp PG_DN       &kp LC(V)
+            &trans          &trans          &trans              &trans              &trans                  &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &trans          &trans          &trans              &trans              &trans                  &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp INS
+            &trans          &trans          &trans              &trans              &trans                  &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                 &none               &trans                  &none           &trans
             >;
         };
