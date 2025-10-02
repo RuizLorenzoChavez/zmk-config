@@ -102,7 +102,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RIGHT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>; 
+            bindings = <&kp RIGHT>, <&kp LC(RIGHT)>, <&kp LS(LC(RIGHT))>; 
         };
 
         sup_up: up_dance {
@@ -112,7 +112,7 @@
             bindings = <&kp UP>, <&kp LS(LC(HOME))>, <&kp LS(LC(PG_UP))>; 
         };
 
-        sup_dn: up_dance {
+        sup_dn: down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
