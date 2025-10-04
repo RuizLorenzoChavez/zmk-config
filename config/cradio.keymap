@@ -155,7 +155,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo NAV>, <&bkd>;
+            bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
@@ -164,7 +164,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo FUN>, <&ftd>;
+            bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
         
@@ -173,7 +173,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo NUM>, <&kp SPACE>;
+            bindings = <&mo>, <&kp SPACE>;
             display-name = "Layer-Tap";
         };
 
@@ -182,7 +182,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo SYM>, <&kp ENTER>;
+            bindings = <&mo>, <&kp ENTER>;
             display-name = "Layer-Tap";
         };
 
