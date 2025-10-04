@@ -36,23 +36,12 @@
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
         };
 
-        back_ln: backline_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&macro_tap BSPC>;
-        };
-
         front_wrd: frontword_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
         };
 
-        front_ln: frontline_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp END>, <&macro_release &kp LSHFT>, <&macro_tap DEL>;
-        };
     };
 
     behaviors {
@@ -150,14 +139,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
+            bindings = <&kp BSPC>, <&back_wrd>;
         };
 
          ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
+            bindings = <&kp TAB>, <&front_wrd>;
         };
 
         // THUMB CLUSTERS LAYER TAP
