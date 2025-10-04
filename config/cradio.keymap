@@ -42,12 +42,6 @@
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
         };
 
-        back_ln: backword_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(HOME)>,  <&kp BSPC>;
-        };
-
     };
 
     behaviors {
