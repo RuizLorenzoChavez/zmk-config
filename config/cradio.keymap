@@ -36,12 +36,23 @@
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
         };
 
+        back_ln: backline_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&macro_tap BSPC>;
+        };
+
         front_wrd: frontword_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
         };
 
+        front_ln: frontline_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp END>, <&macro_release &kp LSHFT>, <&macro_tap DEL>
+        };
     };
 
     behaviors {
@@ -139,14 +150,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp BSPC>, <&back_wrd>;
+            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
         };
 
          ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp TAB>, <&front_wrd>;
+            bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
 
         // THUMB CLUSTERS LAYER TAP
@@ -155,7 +166,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&bkd>;
+            bindings = <&mo NAV>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
@@ -164,7 +175,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&ftd>;
+            bindings = <&mo FUN>, <&ftd>;
             display-name = "Layer-Tap";
         };
         
@@ -173,7 +184,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp SPACE>;
+            bindings = <&mo NUM>, <&kp SPACE>;
             display-name = "Layer-Tap";
         };
 
@@ -182,7 +193,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp ENTER>;
+            bindings = <&mo SYM>, <&kp ENTER>;
             display-name = "Layer-Tap";
         };
 
