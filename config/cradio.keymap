@@ -167,14 +167,14 @@
             compatible = "zmk,behavior-tap-tance";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&kp SPACE>, <&kt LSHFT>;
+            bindings = <&kp SPACE>, <&kp CAPS>;
         };
 
         cap_ent: capsenter_dance {
             compatible = "zmk,behavior-tap-tance";
             #binding-cells = <0>;
             tapping-term-ms = <180>;
-            bindings = <&kp ENTER>, <&kt RSHFT>;
+            bindings = <&kp ENTER>, <&kp CAPS>;
         };
 
         // THUMB CLUSTERS LAYER TAP
