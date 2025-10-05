@@ -49,6 +49,13 @@
                 = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&macro_tap &kp BSPC>;
         };
 
+        front_ln: frontline_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>, <&macro_tap &kp END>, <&macro_release &kp LSHFT>, <&macro_tap &kp BSPC>;
+        };
+
     };
 
     behaviors {
@@ -146,14 +153,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp BSPC>, <&back_wrd>;
+            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
         };
 
          ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp TAB>, <&front_wrd>;
+            bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
 
         // THUMB CLUSTERS LAYER TAP
