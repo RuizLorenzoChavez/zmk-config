@@ -18,13 +18,13 @@
         compatible = "zmk,combos";
         left_esc {
             timeout-ms = <200>;
-            key-positions = <15 16>;
+            key-positions = <0 16>;
             bindings = <&kp ESC>;
         };
 
         right_esc {
             timeout-ms = <200>;
-            key-positions = <32 33>;
+            key-positions = <21 32>;
             bindings = <&kp ESC>;
         };
     };
@@ -46,11 +46,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp HOME>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp BSPC>
-                ;
+                = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&macro_tap &kp BSPC>;
         };
 
     };
@@ -76,7 +72,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 >; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = < 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
 
