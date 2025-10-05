@@ -36,23 +36,18 @@
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp BSPC>, <&macro_release &kp LCTRL>;
         };
 
-        back_ln: backline_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&macro_tap BSPC>;
-        };
-
         front_wrd: frontword_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
         };
 
-        front_ln: frontline_macro {
+        back_ln: backword_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp END>, <&macro_release &kp LSHFT>, <&macro_tap DEL>
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp HOME>, <&macro_release &kp LSHFT>, <&kp BSPC>;
         };
+
     };
 
     behaviors {
@@ -157,19 +152,10 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
+            bindings = <&kp TAB>, <&front_wrd>;
         };
 
         // THUMB CLUSTERS LAYER TAP
-        ntap: nav_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&bkd>;
-            display-name = "Layer-Tap";
-        };
-
         ftap: fun_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -178,22 +164,13 @@
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
-        
-        utap: num_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp SPACE>;
-            display-name = "Layer-Tap";
-        };
 
-        stap: sym_tap {
+        ntap: nav_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp ENTER>;
+            bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
@@ -215,7 +192,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &utap NUM 0             &stap SYM 0   &ntap NAV 0
+                                                                &ftap FUN 0         &lt NUM SPACE           &lt SYM ENTER   &ntap NAV 0
             >;
         };
 
