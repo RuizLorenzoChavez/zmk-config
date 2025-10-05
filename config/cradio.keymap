@@ -163,6 +163,20 @@
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
 
+        cap_spc: capsspace_dance {
+            compatible = "zmk,behavior-tap-tance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp SPACE>, <&kt LSHFT>;
+        };
+
+        cap_ent: capsenter_dance {
+            compatible = "zmk,behavior-tap-tance";
+            #binding-cells = <0>;
+            tapping-term-ms = <180>;
+            bindings = <&kp ENTER>, <&kt RSHFT>;
+        };
+
         // THUMB CLUSTERS LAYER TAP
         ftap: fun_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -200,7 +214,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &lt NUM SPACE           &lt SYM ENTER   &ntap NAV 0
+                                                                &ftap FUN 0         &lt NUM cap_spc         &lt SYM cap_ent &ntap NAV 0
             >;
         };
 
