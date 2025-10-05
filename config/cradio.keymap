@@ -42,10 +42,14 @@
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp DEL>, <&macro_release &kp LCTRL>;
         };
 
-        back_ln: backword_macro {
+        zed_em_kay: zed_em_kay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Z &kp M &kp K &kp EXCLAMATION>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
         };
 
     };
