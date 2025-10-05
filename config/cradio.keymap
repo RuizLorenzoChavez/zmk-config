@@ -149,7 +149,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
+            bindings = <&kp BSPC>, <&back_wrd>;
         };
 
          ftd: frontspace_dance {
