@@ -88,6 +88,20 @@
             bindings = <&kp COMMA>, <&kp DQT>;
         };
 
+        capd: capsd_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp D>, <&kp CAPS>;
+        };
+
+        caph: capsh_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp H>, <&kp CAPS>;
+        };
+
         // ABC MORPH MOD
         marks: marks_morph {
             compatible = "zmk,behavior-mod-morph";
