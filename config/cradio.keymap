@@ -232,7 +232,7 @@
             &kp N0          &kp N9          &kp N8              &kp N7              &kp N6                  &trans          &trans          &trans          &trans          &trans
             &kp N1          &kp N2          &kp N3              &kp N4              &kp N5                  &trans          &trans          &trans          &trans          &trans
             &kp PLUS        &kp MINUS       &kp STAR            &kp FSLH            &kp EQUAL               &trans          &trans          &trans          &trans          &trans
-                                                                &kp ESC             &trans                  &trans          &kp ESC
+                                                                &none               &trans                  &kp ESC         &none
             >;
         };
         
@@ -242,7 +242,7 @@
             &trans          &trans          &trans              &trans              &trans                  &kp HASH        &kp MINUS       &kp EQUAL       &kp PRCNT       &kp STAR
             &trans          &trans          &trans              &trans              &trans                  &kp DLLR        &close_b        &open_b         &kp AMPS        &kp AT
             &trans          &trans          &trans              &trans              &trans                  &kp GRAVE       &kp LT          &kp GT          &kp CARET       &kp BSLH
-                                                                &kp ESC             &trans                  &trans          &kp ESC
+                                                                &none               &kp ESC                 &trans          &none
             >;
         };
 
