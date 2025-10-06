@@ -222,7 +222,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             quick-tap-ms = <100>;
             bindings = <&mo>, <&cap_spc>;
             display-name = "Layer-Tap";
@@ -232,7 +232,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             quick-tap-ms = <100>;
             bindings = <&mo>, <&cap_ent>;
             display-name = "Layer-Tap";
