@@ -57,7 +57,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = < 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
@@ -68,7 +68,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = < 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
@@ -203,7 +203,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
@@ -213,7 +213,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
@@ -223,7 +223,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&cap_spc>;
             display-name = "Layer-Tap";
         };
@@ -233,7 +233,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&cap_ent>;
             display-name = "Layer-Tap";
         };
@@ -266,7 +266,7 @@
             &kp N0          &kp N9          &kp N8              &kp N7              &kp N6                  &trans          &trans          &trans          &trans          &trans
             &kp N1          &kp N2          &kp N3              &kp N4              &kp N5                  &trans          &trans          &trans          &trans          &trans
             &kp PLUS        &kp MINUS       &kp STAR            &kp FSLH            &kp EQUAL               &trans          &trans          &trans          &trans          &trans
-                                                                &kp ESC             &trans                  &trans          &trans
+                                                                &kp ESC             &trans                  &trans          &kp ESC
             >;
         };
         
@@ -276,7 +276,7 @@
             &trans          &trans          &trans              &trans              &trans                  &kp HASH        &kp MINUS       &kp EQUAL       &kp PRCNT       &kp STAR
             &trans          &trans          &trans              &trans              &trans                  &kp DLLR        &close_b        &open_b         &kp AMPS        &kp AT
             &trans          &trans          &trans              &trans              &trans                  &kp GRAVE       &kp LT          &kp GT          &kp CARET       &kp BSLH
-                                                                &none               &trans                  &trans          &kp ESC
+                                                                &kp ESC             &trans                  &trans          &kp ESC
             >;
         };
 
