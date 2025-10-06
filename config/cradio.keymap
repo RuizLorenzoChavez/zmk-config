@@ -178,7 +178,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mmv MOVE_RIGHT>, &msc SCRL_RIGHT>;
+            bindings = <&mmv MOVE_RIGHT>, <&msc SCRL_RIGHT>;
         };
 
         // THUMB CLUSTER TAP DANCE
@@ -295,7 +295,7 @@
             &mkp MB2        &mkp MB4        &mou_up             &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mou_left       &mou_dn             &mou_rt             &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp INS
             &none           &none           &none               &none               &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                &none               &kp LSHFT               &none           &trans
+                                                                &none               &none                   &none           &trans
             >;
         };
 
