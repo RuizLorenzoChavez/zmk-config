@@ -186,14 +186,14 @@
         cap_spc: capsspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <100>;
             bindings = <&kp SPACE>, <&kp CAPS>;
         };
 
         cap_ent: capsenter_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <100>;
             bindings = <&kp ENTER>, <&kp CAPS>;
         };
 
