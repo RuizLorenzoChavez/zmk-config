@@ -183,20 +183,6 @@
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
 
-        cap_spc: capsspace_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&kp SPACE>, <&kp CAPS>;
-        };
-
-        cap_ent: capsenter_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&kp ENTER>, <&kp CAPS>;
-        };
-
         // THUMB CLUSTERS LAYER TAP
         ftap: fun_tap {
             compatible = "zmk,behavior-hold-tap";
