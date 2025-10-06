@@ -1,9 +1,13 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
 
 // Home row mods macro
 #define ABC 0
@@ -148,6 +152,35 @@
             bindings = <&kp DOWN>, <&kp LS(END)>, <&kp LS(PG_DN)>; 
         };
 
+        // MOUSE MOVEMENT-SCROLL TAP DANCE
+        mou_up: mouse_up_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mmv MOVE_UP>, <&msc SCRL_UP>;
+        };
+
+        mou_dn: mouse_dn_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mmv MOVE_DOWN>, <&msc SCRL_DOWN>;
+        };
+
+        mou_lf: mouse_lf_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
+        };
+
+        mou_rt: mouse_rt_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&mmv MOVE_RIGHT>, &msc SCRL_RIGHT>;
+        };
+
         // THUMB CLUSTER TAP DANCE
         bkd: backspace_dance {
             compatible = "zmk,behavior-tap-dance";
@@ -259,10 +292,10 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &trans          &trans          &trans              &trans              &trans                  &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
-            &trans          &trans          &trans              &trans              &trans                  &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp INS
-            &trans          &trans          &trans              &trans              &trans                  &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                &none               &trans                  &none           &trans
+            &mkp MB2        &mkp MB4        &mou_up             &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB1        &mou_left       &mou_dn             &mou_rt             &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp INS
+            &none           &none           &none               &none               &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
+                                                                &none               &kp LSHFT               &none           &trans
             >;
         };
 
