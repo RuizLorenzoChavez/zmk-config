@@ -203,6 +203,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
@@ -212,6 +213,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
@@ -221,6 +223,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&cap_spc>;
             display-name = "Layer-Tap";
         };
@@ -230,6 +233,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
             bindings = <&mo>, <&cap_ent>;
             display-name = "Layer-Tap";
         };
