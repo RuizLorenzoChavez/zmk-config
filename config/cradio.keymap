@@ -18,20 +18,7 @@
 #define BLU 5
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        left_esc {
-            timeout-ms = <200>;
-            key-positions = <0 16>;
-            bindings = <&kp ESC>;
-        };
-
-        right_esc {
-            timeout-ms = <200>;
-            key-positions = <21 32>;
-            bindings = <&kp ESC>;
-        };
-    };
+    // combos {};
 
     macros {
         back_wrd: backword_macro {
