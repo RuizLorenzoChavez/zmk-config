@@ -28,7 +28,7 @@
         };
 
         resc {
-            timout-ms = <75>;
+            timeout-ms = <75>;
             key-positions = <19 20>;
             bindings = <&kp ESC>;
         };
