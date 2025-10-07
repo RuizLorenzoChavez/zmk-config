@@ -143,28 +143,28 @@
         sup_lf: left_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>; 
         };
 
         sup_rt: right_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp RIGHT>, <&kp LC(RIGHT)>, <&kp LS(LC(RIGHT))>; 
         };
 
         sup_up: up_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp UP>, <&kp LS(HOME)>, <&kp LS(PG_UP)>; 
         };
 
         sup_dn: down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&kp DOWN>, <&kp LS(END)>, <&kp LS(PG_DN)>; 
         };
 
