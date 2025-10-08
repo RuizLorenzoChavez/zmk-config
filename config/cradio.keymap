@@ -20,19 +20,20 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
         lesc {
-            timeout-ms = <75>;
+            timeout-ms = <100>;
+            slow-release;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
 
+    // Right ESC combo
         resc {
-            timeout-ms = <75>;
-            key-positions = <20 21>;
+            timeout-ms = <100>;
+            slow-release;
+            key-positions = <19 20>;
             bindings = <&kp ESC>;
         };
-
     };
 
     macros {
