@@ -201,14 +201,14 @@
         bkd: backspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp BSPC>, <&back_wrd>, <&back_ln>;
         };
 
         ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
 
