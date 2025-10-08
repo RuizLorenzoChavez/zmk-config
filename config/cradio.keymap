@@ -93,13 +93,13 @@
         uno: sqt_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp DOT>, <&kp SQT>;
         };
         duo: dqt_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
             bindings = <&kp COMMA>, <&kp DQT>;
         };
 
