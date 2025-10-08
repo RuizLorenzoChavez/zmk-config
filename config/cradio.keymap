@@ -94,7 +94,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require_prior-idle-ms = <150>;
+            require-prior-idle-ms = <150>;
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -247,7 +247,7 @@
             display-name = "_ABC";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-            &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &caphm CAPS D       &caphm CAPS H   &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
+            &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &caphm CAPS D           &caphm CAPS H   &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
                                                                 &ftap FUN 0         &lt NUM SPACE           &lt SYM ENTER   &ntap NAV 0
             >;
