@@ -257,6 +257,14 @@
 
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional_layers";
+        blu_layer {
+            if-layers <NUM SYM>;
+            then-layer = <BLU>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         ABC_layer {
