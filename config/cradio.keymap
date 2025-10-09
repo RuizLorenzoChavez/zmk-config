@@ -217,7 +217,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
@@ -227,7 +227,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
