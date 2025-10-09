@@ -21,7 +21,7 @@
     combos {
         compatible = "zmk,combos";
         lesc {
-            timeout-ms = <100>;
+            timeout-ms = <270>;
             slow-release;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
@@ -29,7 +29,7 @@
 
     // Right ESC combo
         resc {
-            timeout-ms = <100>;
+            timeout-ms = <270>;
             slow-release;
             key-positions = <19 20>;
             bindings = <&kp ESC>;
