@@ -90,16 +90,6 @@
             hold-trigger-on-release;
         };
 
-         caphm: caps_home_row {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&kp>;
-        };
-
         // ABC TAP DANCE
         uno: sqt_dance {
             compatible = "zmk,behavior-tap-dance";
