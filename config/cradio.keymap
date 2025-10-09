@@ -284,6 +284,5 @@
             &kp F15         &kp F14         &kp F13             &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
                                                                 &trans              &none                   &none           &none
             >;
-
-    };
+        };
 };
