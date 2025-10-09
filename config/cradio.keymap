@@ -39,14 +39,14 @@
             slow-release;
             key-positions = <30 31>;
             bindings = <&kp TAB>;
-        }
+        };
 
         bacc {
             timeout-ms = <270>;
             slow-release;
             key-positions = <32 33>;
             bindings = <&kp BSPC>;
-        }
+        };
     };
 
     macros {
@@ -245,6 +245,10 @@
             display-name = "Layer-Tap";
         };
 
+        ltc: layer_tap_custom {
+            quick-tap-ms = <150>;
+        };
+
     };
 
     keymap {
@@ -255,7 +259,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &lt NUM SPACE           &lt SYM ENTER   &ntap NAV 0
+                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER   &ntap NAV 0
             >;
         };
 
