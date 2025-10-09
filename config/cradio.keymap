@@ -15,6 +15,7 @@
 #define SYM 2
 #define NAV 3
 #define FUN 4
+#define BLU 5
 
 / {
     combos {
@@ -216,7 +217,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
@@ -226,13 +227,20 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <150>;
             bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
     };
-};
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <FUN NAV>;
+            then-layer = <BLU>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -285,4 +293,5 @@
                                                                 &trans              &none                   &none           &none
             >;
         };
+    };
 };
