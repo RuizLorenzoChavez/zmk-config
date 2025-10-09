@@ -234,14 +234,6 @@
 
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <FUN NAV>;
-            then-layer = <BLU>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         ABC_layer {
@@ -292,6 +284,6 @@
             &kp F15         &kp F14         &kp F13             &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
                                                                 &trans              &none                   &none           &none
             >;
-        };
+
     };
 };
