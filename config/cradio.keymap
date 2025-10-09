@@ -15,7 +15,6 @@
 #define SYM 2
 #define NAV 3
 #define FUN 4
-#define BLU 5
 
 / {
     combos {
@@ -233,6 +232,7 @@
         };
 
     };
+};
 
     keymap {
         compatible = "zmk,keymap";
