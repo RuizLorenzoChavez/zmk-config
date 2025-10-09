@@ -22,7 +22,7 @@
         lesc {
             timeout-ms = <270>;
             slow-release;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             bindings = <&kp ESC>;
         };
 
@@ -30,7 +30,7 @@
         resc {
             timeout-ms = <270>;
             slow-release;
-            key-positions = <3 4>;
+            key-positions = <6 7>;
             bindings = <&kp ESC>;
         };
     };
