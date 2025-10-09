@@ -33,6 +33,20 @@
             key-positions = <7 8>;
             bindings = <&kp ESC>;
         };
+
+        tabc {
+            timeout-ms = <270>;
+            slow-release;
+            key-positions = <30 31>;
+            bindings = <&kp TAB>;
+        }
+
+        bacc {
+            timeout-ms = <270>;
+            slow-release;
+            key-positions = <32 33>;
+            bindings = <&kp BSPC>;
+        }
     };
 
     macros {
