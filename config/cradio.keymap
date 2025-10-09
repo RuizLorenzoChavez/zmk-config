@@ -31,7 +31,7 @@
         resc {
             timeout-ms = <270>;
             slow-release;
-            key-positions = <19 20>;
+            key-positions = <3 4>;
             bindings = <&kp ESC>;
         };
     };
