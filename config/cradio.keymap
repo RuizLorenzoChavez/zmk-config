@@ -6,6 +6,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// Mouse config
+&mmv {
+    trigger-period-ms = <8>;
+    acceleration-exponent = <2>;
+};
+
 // Home row mods macro
 #define ABC 0
 #define NUM 1
