@@ -279,7 +279,7 @@
             &mkp MB2        &mkp MB4            &mmv MOVE_UP 900    &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT 900  &mmv MOVE_DOWN 900  &mmv MOVE_RIGHT 900     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                    &ltc NA3                &ltc NA2                &none           &trans
+                                                                    &to NA3                 &to NA2                &none           &trans
             >;
         };
 
@@ -289,7 +289,7 @@
             &mkp MB2        &mkp MB4            &mmv MOVE_UP 1500   &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT 1500 &mmv MOVE_DOWN 1500 &mmv MOVE_RIGHT 1500    &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                    &ltc NA3                &trans                  &none           &trans
+                                                                    &to NA3                 &trans                  &none           &trans
             >;
         };
 
@@ -299,7 +299,7 @@
             &mkp MB2        &mkp MB4            &msc SCRL_UP 20     &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &msc SCRL_LEFT 20   &msc SCRL_DOWN 20   &SCRL_RIGHT 20          &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                    &trans                  &none                   &none           &trans
+                                                                    &trans                  ,ss&none                   &none           &trans
             >;
         };
 
