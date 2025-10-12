@@ -183,35 +183,6 @@
             bindings = <&kp DOWN>, <&kp LS(END)>, <&kp LS(PG_DN)>; 
         };
 
-        // MOUSE MOVEMENT-SCROLL TAP DANCE
-        mou_up: mouse_up_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mmv MOVE_UP>, <&msc SCRL_UP>;
-        };
-
-        mou_dn: mouse_dn_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mmv MOVE_DOWN>, <&msc SCRL_DOWN>;
-        };
-
-        mou_lf: mouse_lf_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mmv MOVE_LEFT>, <&msc SCRL_LEFT>;
-        };
-
-        mou_rt: mouse_rt_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <300>;
-            bindings = <&mmv MOVE_RIGHT>, <&msc SCRL_RIGHT>;
-        };
-
         // THUMB CLUSTER TAP DANCE
         bkd: backspace_dance {
             compatible = "zmk,behavior-tap-dance";
