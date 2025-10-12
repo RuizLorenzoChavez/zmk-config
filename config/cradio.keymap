@@ -13,12 +13,12 @@
 // Mouse config
 &mmv {
     time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
+    acceleration-exponent = <0>;
 };
 
 &msc {
     time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
+  acceleration-exponent = <0>;
 };
 
 // Home row mods macro
