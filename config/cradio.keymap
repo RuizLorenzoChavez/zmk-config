@@ -30,7 +30,6 @@
             bindings = <&kp ESC>;
         };
 
-    // Right ESC combo
         resc {
             timeout-ms = <270>;
             slow-release;
