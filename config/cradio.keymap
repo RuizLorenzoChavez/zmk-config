@@ -274,8 +274,8 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &ms MB2        &ms MB4            &mmv MOVE_UP 900    &ms MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
-            &ms MB1        &mmv MOVE_LEFT 900  &mmv MOVE_DOWN 900  &mmv MOVE_RIGHT 900     &ms MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
+            &mkp MB2        &mkp MB4            &mmv MOVE_UP 900    &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB1        &mmv MOVE_LEFT 900  &mmv MOVE_DOWN 900  &mmv MOVE_RIGHT 900     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                     &mo NA3                 &mo NA2                 &none           &trans
             >;
@@ -284,8 +284,8 @@
         NA2_layer {
             display-name = "_NA2";
             bindings = <
-            &ms MB2        &ms MB4            &msc SCRL_UP 20     &ms MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
-            &ms MB1        &msc SCRL_LEFT 20   &msc SCRL_DOWN 20   &msc SCRL_RIGHT 20      &ms MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
+            &mkp MB2        &mkp MB4            &msc SCRL_UP 20     &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB1        &msc SCRL_LEFT 20   &msc SCRL_DOWN 20   &msc SCRL_RIGHT 20      &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                     &none                   &trans                  &none           &trans
             >;
@@ -294,8 +294,8 @@
         NA3_layer {
             display-name = "_NA3";
             bindings = <
-            &ms MB2        &ms MB4            &mmv MOVE_UP 1500   &ms MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
-            &ms MB1        &mmv MOVE_LEFT 1500 &mmv MOVE_DOWN 1500 &mmv MOVE_RIGHT 1500    &ms MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
+            &mkp MB2        &mkp MB4            &mmv MOVE_UP 1500   &mkp MB5                &kp LCTRL               &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB1        &mmv MOVE_LEFT 1500 &mmv MOVE_DOWN 1500 &mmv MOVE_RIGHT 1500    &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &none           &none               &none               &none                   &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                     &trans                  &none                   &none           &trans
             >;
