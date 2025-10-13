@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // Default mouse scroll and movement speeds
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 900  
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
 
 #include <behaviors.dtsi>
