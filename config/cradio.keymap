@@ -29,6 +29,7 @@
 #define FUN 4
 #define BLU 5
 #define MAC 6
+#define MAV 7
 
 / {
     combos {
@@ -211,6 +212,14 @@
             tapping-term-ms = <270>;
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
+
+        mbkd: mac_backspace_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <270>;
+            bindings = <&kp BSPC>, <&kp LA(BSPC)>, <&kp LG(BSPC)>;
+        };
+
         // THUMB CLUSTERS LAYER TAP
         ftap: fun_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -238,7 +247,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
-            bindings = <&mo>, <&bkd>;
+            bindings = <&mo>, <&mbkd>;
             display-name = "Layer-Tap";
         };
 
