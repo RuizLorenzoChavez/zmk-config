@@ -216,7 +216,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <270>;
-            bindings = <&kp BSPC>, <&kp LA(BSPC)>, <&kp LG(BSPC)>;
+            bindings = <&kp BSPC>;
         };
 
         // THUMB CLUSTERS LAYER TAP
@@ -267,6 +267,7 @@
             if-layers = <NUM SYM>;
             then-layer = <BLU>;
         };
+
     };
 
     keymap {
