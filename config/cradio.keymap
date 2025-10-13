@@ -65,6 +65,13 @@
             bindings = <&kp BSPC>;
             layers = <ABC NUM SYM MAC>;
         };
+
+        macc {
+            timeout-ms = <270>;
+            slow-release;
+            key-positions = <30 33>;
+            bindings = <&tog MAC>;
+        };
     };
 
     macros {
