@@ -28,6 +28,7 @@
 #define NAV 3
 #define FUN 4
 #define BLU 5
+#define MAC 6
 
 / {
     combos {
@@ -255,7 +256,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER   &ntap NAV 0
+                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
             >;
         };
 
@@ -306,6 +307,16 @@
             &none           &none           &bt BT_PRV          &bt BT_NXT          &none                   &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0
             &none           &none           &none               &none               &none                   &none           &none           &none           &none           &none
                                                                 &none               &none                   &none           &none
+            >;
+        };
+
+        MAC_layer {
+            display-name = "_MAC";
+            bindings = <
+            &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
+            &hml LALT A     &hml LCTRL R     &hml LGUI S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RGUI E     &hmr RCTRL I    &hmr RALT O
+            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
+                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
             >;
         };
     };
