@@ -211,14 +211,6 @@
             tapping-term-ms = <270>;
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
-
-        mbkd: mac_backspace_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <270>;
-            bindings = <&kp BSPC>;
-        };
-
         // THUMB CLUSTERS LAYER TAP
         ftap: fun_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -246,7 +238,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <170>;
-            bindings = <&mo>, <&mbkd>;
+            bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
@@ -267,7 +259,6 @@
             if-layers = <NUM SYM>;
             then-layer = <BLU>;
         };
-
     };
 
     keymap {
