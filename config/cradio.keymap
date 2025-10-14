@@ -39,7 +39,7 @@
             slow-release;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
-            layers = <ABC NUM SYM MAC>;
+            layers = <ABC NUM SYM MAC NAV MAV>;
         };
 
         resc {
@@ -47,7 +47,7 @@
             slow-release;
             key-positions = <7 8>;
             bindings = <&kp ESC>;
-            layers = <ABC NUM SYM MAC>;
+            layers = <ABC NUM SYM MAC NAV MAV>;
         };
 
         spac {
@@ -63,6 +63,14 @@
             slow-release;
             key-positions = <32 33>;
             bindings = <&kp BSPC>;
+            layers = <ABC NUM SYM MAC>;
+        };
+
+        capc {
+            timeout-ms = <270>;
+            slow-release;
+            key-positions = <13 16>;
+            bindings = <&caps_word>;
             layers = <ABC NUM SYM MAC>;
         };
 
