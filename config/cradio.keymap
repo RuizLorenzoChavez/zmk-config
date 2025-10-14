@@ -18,7 +18,14 @@
 
 &msc {
     time-to-max-speed-ms = <300>;
-  acceleration-exponent = <0>;
+    acceleration-exponent = <0>;
+};
+
+// Sticky keys config
+&sk {
+    release-after-ms = <3000>;
+    lazy;
+    ignore-modifiers;
 };
 
 // Home row mods macro
@@ -112,16 +119,6 @@
     };
 
     behaviors {
-        // STICKY keys
-        sk: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <3000>;
-            lazy;
-            ignore-modifiers;
-        };
-
         // HOME ROW BEHAVIORS
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
