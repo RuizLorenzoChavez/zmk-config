@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // Default mouse scroll and movement speeds
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 900  
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 800  
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
 
 #include <behaviors.dtsi>
@@ -23,7 +23,7 @@
 
 // Sticky keys config
 &sk {
-    release-after-ms = <2000>;
+    release-after-ms = <1000>;
     ignore-modifiers;
 };
 
@@ -219,7 +219,7 @@
 
         ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
+            #binding-cells = <0 >;
             tapping-term-ms = <270>;
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
