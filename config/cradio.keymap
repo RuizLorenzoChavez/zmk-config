@@ -341,7 +341,7 @@
             display-name = "_MAC";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-            &hml LALT A     &hml LCTRL R     &hml LGUI S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RGUI E     &hmr RCTRL I    &hmr RALT O
+            &hml LALT A     &hml LCTRL R     &hml LGUI S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RGUI E     &hmr RCTRL I    &hmr RALT O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
                                                                 &ltc FUN TAB        &ltc NUM SPACE          &ltc SYM ENTER  &mtap MAV 0
             >;
