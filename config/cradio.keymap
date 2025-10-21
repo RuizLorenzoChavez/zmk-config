@@ -25,6 +25,7 @@
 &sk {
     release-after-ms = <1000>;
     quick-release;
+    ignore-modifiers;
 };
 
 // Home row mods macro
@@ -151,7 +152,6 @@
             tapping-term-ms = <160>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-on-release;
         };
 
         // ABC TAP DANCE
