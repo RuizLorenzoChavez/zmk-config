@@ -12,12 +12,12 @@
 
 // Mouse config
 &mmv {
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
 };
 
 &msc {
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
 };
 
