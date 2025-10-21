@@ -24,7 +24,7 @@
 // Sticky keys config
 &sk {
     release-after-ms = <1000>;
-    ignore-modifiers;
+    quick-release;
 };
 
 // Home row mods macro
@@ -298,7 +298,7 @@
             display-name = "_ABC";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-            &hml LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
+            &hmg LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &kp D                   &kp H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmg RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
                                                                 &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
             >;
