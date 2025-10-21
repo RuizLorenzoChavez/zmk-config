@@ -144,7 +144,7 @@
             hold-trigger-on-release;
         };
 
-        hmg: home_row_mod_right {
+        hmg: home_row_mod_gui {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
