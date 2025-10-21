@@ -143,6 +143,17 @@
             hold-trigger-on-release;
         };
 
+        hmg: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <70>;
+            tapping-term-ms = <160>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+        };
+
         // ABC TAP DANCE
         uno: sqt_dance {
             compatible = "zmk,behavior-tap-dance";
