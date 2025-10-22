@@ -195,6 +195,13 @@
             bindings = <&kp MINUS>, <&kp UNDER>;
         };
 
+        eq_plus: equal_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
+        };
+
         // NAV TAP DANCE
         sup_lf: left_dance {
             compatible = "zmk,behavior-tap-dance";
@@ -336,7 +343,7 @@
         SYM_layer {
             display-name = "_SYM";
             bindings = <
-            &trans          &trans          &trans              &trans              &trans                  &kp HASH        &kp MINUS       &kp EQUAL       &kp PRCNT       &kp STAR
+            &trans          &trans          &trans              &trans              &trans                  &kp HASH        &min_und        &eq_plus        &kp PRCNT       &kp STAR
             &trans          &trans          &trans              &trans              &trans                  &kp DLLR        &close_b        &open_b         &kp AMPS        &kp AT
             &trans          &trans          &trans              &trans              &trans                  &kp GRAVE       &kp LT          &kp GT          &kp CARET       &kp BSLH
                                                                 &none               &trans                  &trans          &none
