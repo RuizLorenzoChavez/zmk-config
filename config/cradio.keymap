@@ -37,6 +37,7 @@
 #define BLU 5
 #define MAC 6
 #define MAV 7
+#define REV 8
 
 / {
     combos {
@@ -277,6 +278,21 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // THUMB CLUSTERS TAP DANCE
+        udan: num_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&ltc NUM SPACE>, <&mo REV>;
+        };
+
+        sdan: sym_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&ltc SYM ENTER>, <&mo REV>;
+        };
+
     };
 
     conditional_layers {
@@ -293,9 +309,9 @@
             display-name = "_ABC";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-            &hmg LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H           &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmg RGUI O
+            &hmg LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmg RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
+                                                                &ftap FUN 0         &udan                   &sdan           &ntap NAV 0
             >;
         };
 
@@ -367,6 +383,17 @@
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp DEL         &kp LG(DOWN)    &kp LG(V)
                                                                 &none               &kp LGUI                &none           &trans
             >;
+        };
+
+        REV_layer {
+            display-name = "_REV";
+            bindings = <
+            &kp SEMI        &kp Y           &kp U               &kp L               &kp J                   &kp G           &kp P           &kp F           &kp W           &kp Q
+            &hmg RGUI O     &hmr RALT I     &hmr RCTRL E        &hmr RSHFT N        &hmc 0 H                &hmc 0 D        &hml LSHFT T    &hml LCTRL S    &hml LALT R     &hmg LGUI A
+            &marks          &uno            &duo                &kp M               &kp K                   &kp B           &kp V           &kp C           &kp X           &kp Z
+                                                                &ntap NAV 0         &trans                  &trans          &ftap FUN 0
+>;
+
         };
     };
 };
