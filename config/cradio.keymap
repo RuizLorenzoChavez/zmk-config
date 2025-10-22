@@ -23,7 +23,7 @@
 
 // Sticky keys config
 &sk {
-    release-after-ms = <300>;
+    release-after-ms = <500>;
     quick-release;
     ignore-modifiers;
 };
