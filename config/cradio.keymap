@@ -180,11 +180,19 @@
             tapping-term-ms = <200>;
             bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
         };
+
         open_b: open_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
+        };
+
+        min_und: minus_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
         };
 
         // NAV TAP DANCE
