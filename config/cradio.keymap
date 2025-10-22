@@ -292,22 +292,6 @@
             quick-tap-ms = <130>;
             bindings = <&mo>, <&kp>;
         };
-
-        // THUMB CLUSTERS TAP DANCE
-        udan: num_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&ltc NUM SPACE>, <&mo REV>;
-        };
-
-        sdan: sym_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&ltc SYM ENTER>, <&mo REV>;
-        };
-
     };
 
     conditional_layers {
@@ -326,7 +310,7 @@
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hmg LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmg RGUI O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
-                                                                &ftap FUN 0         &udan                   &sdan           &ntap NAV 0
+                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
             >;
         };
 
@@ -353,7 +337,7 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &none        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                 &none               &kp LCTRL               &none           &trans
@@ -393,7 +377,7 @@
         MAV_layer {
             display-name = "_MAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &none        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
+            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LG(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp DEL         &kp LG(DOWN)    &kp LG(V)
                                                                 &none               &kp LGUI                &none           &trans
