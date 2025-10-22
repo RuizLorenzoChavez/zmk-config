@@ -353,7 +353,7 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
+            &mkp MB2        &mkp MB4        &none        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
                                                                 &none               &kp LCTRL               &none           &trans
@@ -393,7 +393,7 @@
         MAV_layer {
             display-name = "_MAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
+            &mkp MB2        &mkp MB4        &none        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LG(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp DEL         &kp LG(DOWN)    &kp LG(V)
                                                                 &none               &kp LGUI                &none           &trans
