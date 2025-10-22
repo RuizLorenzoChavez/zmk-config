@@ -240,8 +240,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <130>;
             bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
@@ -250,8 +250,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <130>;
             bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
@@ -260,8 +260,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <170>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <130>;
             bindings = <&mo>, <&mbkd>;
             display-name = "Layer-Tap";
         };
@@ -269,9 +269,9 @@
         ltc: layer_tap_custom {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            quick-tap-ms = <170>;
+            quick-tap-ms = <130>;
             bindings = <&mo>, <&kp>;
         };
 
