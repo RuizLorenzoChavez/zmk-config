@@ -260,7 +260,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <130>;
-            bindings = <&mo>, <&ftd>;
+            bindings = <&sl>, <&ftd>;
             display-name = "Layer-Tap";
         };
 
@@ -270,7 +270,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <130>;
-            bindings = <&mo>, <&bkd>;
+            bindings = <&sl>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
@@ -391,7 +391,7 @@
             &hmg RGUI O     &hmr RALT I     &hmr RCTRL E        &hmr RSHFT N        &hmc 0 H                &hmc 0 D        &hml LSHFT T    &hml LCTRL S    &hml LALT R     &hmg LGUI A
             &marks          &uno            &duo                &kp M               &kp K                   &kp B           &kp V           &kp C           &kp X           &kp Z
                                                                 &ntap NAV 0         &trans                  &trans          &ftap FUN 0
->;
+            >;
 
         };
     };
