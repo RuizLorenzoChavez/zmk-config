@@ -260,7 +260,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <130>;
-            bindings = <&sl>, <&ftd>;
+            bindings = <&mo>, <&ftd>;
             display-name = "Layer-Tap";
         };
 
@@ -270,7 +270,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <130>;
-            bindings = <&sl>, <&bkd>;
+            bindings = <&mo>, <&bkd>;
             display-name = "Layer-Tap";
         };
 
