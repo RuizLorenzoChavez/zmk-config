@@ -233,6 +233,20 @@
             bindings = <&kp DOWN>, <&kp LS(END)>, <&kp LS(PG_DN)>; 
         };
 
+        sup_pu: page_up_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp PG_UP>, <kp LC(PG_UP)>;
+        };
+
+        sup_pd: page_down_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp PG_DN>, <kp LC(PG_DN)>;
+        };
+
         // THUMB CLUSTER TAP DANCE
         bkd: backspace_dance {
             compatible = "zmk,behavior-tap-dance";
@@ -341,7 +355,7 @@
             bindings = <
             &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
-            &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
+            &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &sup_pu         &kp DEL         &sup_pd         &kp LC(V)
                                                                 &none               &kp LCTRL               &sl REV         &trans
             >;
         };
