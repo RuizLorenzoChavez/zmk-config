@@ -237,14 +237,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp PG_UP>, <kp LC(PG_UP)>;
+            bindings = <&kp PG_UP>, <&kp LC(PG_UP)>;
         };
 
         sup_pd: page_down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp PG_DN>, <kp LC(PG_DN)>;
+            bindings = <&kp PG_DN>, <&kp LC(PG_DN)>;
         };
 
         // THUMB CLUSTER TAP DANCE
@@ -257,7 +257,7 @@
 
         ftd: frontspace_dance {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0 >;
+            #binding-cells = <0>;
             tapping-term-ms = <270>;
             bindings = <&kp TAB>, <&front_wrd>, <&front_ln>;
         };
