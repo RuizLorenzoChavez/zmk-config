@@ -26,6 +26,7 @@
     release-after-ms = <500>;
     quick-release;
     ignore-modifiers;
+    lazy;
 };
 
 // Home row mods macro
@@ -340,7 +341,7 @@
             &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &kp HOME        &sup_up         &kp END         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp PG_UP       &kp DEL         &kp PG_DN       &kp LC(V)
-                                                                &none               &kp LCTRL               &mo REV         &trans
+                                                                &none               &kp LCTRL               &sl REV         &trans
             >;
         };
 
@@ -350,7 +351,7 @@
             &kp F10         &kp F9          &kp F8              &kp F7              &kp F6                  &tog MAC        &kp C_BRI_UP    &kp C_BRI_DN    &kp C_BRI_MIN   &none
             &kp F1          &kp F2          &kp F3              &kp F4              &kp F5                  &none           &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE      &none
             &kp F15         &kp F14         &kp F13             &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
-                                                                &trans              &mo REV                 &none           &none
+                                                                &trans              &sl REV                 &none           &none
             >;
         };
 
