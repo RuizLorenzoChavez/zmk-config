@@ -30,7 +30,7 @@
 };
 
 // Home row mods macro
-#define ABC 0
+#define COL 0
 #define NUM 1
 #define SYM 2
 #define NAV 3
@@ -39,6 +39,7 @@
 #define MAC 6
 #define MAV 7
 #define REV 8
+#define QWE 9
 
 / {
     combos {
@@ -48,7 +49,7 @@
             slow-release;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-            layers = <ABC NUM SYM NAV MAC MAV>;
+            layers = <COL NUM SYM NAV MAC MAV>;
         };
 
         resc {
@@ -56,7 +57,7 @@
             slow-release;
             key-positions = <8 9>;
             bindings = <&kp ESC>;
-            layers = <ABC NUM SYM NAV MAC MAV>;
+            layers = <COL NUM SYM NAV MAC MAV>;
         };
 
         spac {
@@ -64,7 +65,7 @@
             slow-release;
             key-positions = <30 31>;
             bindings = <&kp SPACE>;
-            layers = <ABC NUM SYM MAC>;
+            layers = <COL NUM SYM MAC>;
         };
 
         bacc {
@@ -72,7 +73,7 @@
             slow-release;
             key-positions = <32 33>;
             bindings = <&kp BSPC>;
-            layers = <ABC NUM SYM MAC>;
+            layers = <COL NUM SYM MAC>;
         };
     };
 
@@ -151,7 +152,7 @@
             bindings = <&caps_word>, <&kp>;
         };
 
-        // ABC TAP DANCE
+        // COL TAP DANCE
         uno: sqt_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -166,7 +167,7 @@
         };
 
 
-        // ABC MORPH MOD
+        // COL MORPH MOD
         marks: marks_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -305,8 +306,8 @@
 
     keymap {
         compatible = "zmk,keymap";
-        ABC_layer {
-            display-name = "_ABC";
+        COL_layer {
+            display-name = "_COL";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
             &hmg LGUI A     &hml LALT R     &hml LCTRL S        &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RCTRL E    &hmr RALT I     &hmg RGUI O
@@ -349,7 +350,7 @@
             display-name = "_FUN";
             bindings = <
             &kp F10         &kp F9          &kp F8              &kp F7              &kp F6                  &tog MAC        &kp C_BRI_UP    &kp C_BRI_DN    &kp C_BRI_MIN   &none
-            &kp F1          &kp F2          &kp F3              &kp F4              &kp F5                  &none           &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE      &none
+            &kp F1          &kp F2          &kp F3              &kp F4              &kp F5                  &tog QWE        &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE      &none
             &kp F15         &kp F14         &kp F13             &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
                                                                 &trans              &sl REV                 &none           &none
             >;
@@ -358,7 +359,7 @@
         BLU_layer {
             display-name = "_BLU";
             bindings = <
-            &none           &none           &bt BT_CLR_ALL      &bt BT_CLR          &none                   &bt BT_DISC 4   &bt BT_DISC 3   &bt BT_DISC 2   &bt BT_DISC 1   &bt BT_DISC 0
+            &kp B           &none           &bt BT_CLR_ALL      &bt BT_CLR          &none                   &bt BT_DISC 4   &bt BT_DISC 3   &bt BT_DISC 2   &bt BT_DISC 1   &bt BT_DISC 0
             &none           &none           &bt BT_PRV          &bt BT_NXT          &none                   &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0
             &none           &none           &none               &none               &none                   &none           &none           &none           &none           &none
                                                                 &none               &none                   &none           &none
@@ -393,7 +394,16 @@
             &marks          &uno            &duo                &kp M               &kp K                   &kp B           &kp V           &kp C           &kp X           &kp Z
                                                                 &ntap NAV 0         &trans                  &trans          &ftap FUN 0
             >;
+        };
 
+        QWE_layer {
+            display-name = "_QWE";
+            bindings = <
+            &kp Q           &kp W           &kp E               &kp R               &kp T                   &kp Y           &kp U           &kp I           &kp O           &kp P
+            &hmg LGUI A     &hml LALT S     &hml LCTRL D        &hml LSHFT F        &hmc 0 G                &hmc 0 H        &hmr RSHFT J    &hmr RCTRL K    &hmr RALT L     &hmg RGUI SEMI
+            &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp N           &kp M           &duo            &uno            &marks
+                                                                &ftap FUN 0         &ltc NUM SPACE          &ltc SYM ENTER  &ntap NAV 0
+            >;
         };
     };
 };
