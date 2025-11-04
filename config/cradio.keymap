@@ -25,7 +25,7 @@
 &sk {
     release-after-ms = <1000>;
     quick-release;
-    lazy;
+    ignore-modifiers;
 };
 
 // Home row mods macro
