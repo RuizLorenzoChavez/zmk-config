@@ -401,7 +401,7 @@
         NAV_layer {
             display-name = "_NAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &sup_ho         &sup_up         &kp sup_en      &kp LC(A)
+            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LC(X)       &sup_ho         &sup_up         &sup_en         &kp LC(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LC(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &sup_pu         &kp DEL         &sup_pd         &kp LC(V)
                                                                 &trans              &kp LCTRL               &sl REV         &trans
