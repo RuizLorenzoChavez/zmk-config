@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // Default mouse scroll and movement speeds
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 800  
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
 
 #include <behaviors.dtsi>
@@ -25,6 +25,7 @@
 &sk {
     release-after-ms = <1000>;
     quick-release;
+    lazy;
     ignore-modifiers;
 };
 
@@ -222,28 +223,42 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp UP>, <&kp LS(HOME)>, <&kp LS(PG_UP)>; 
+            bindings = <&kp UP>, <&kp LC(UP)>, <&kp LS(LC(UP))>; 
         };
 
         sup_dn: down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp DOWN>, <&kp LS(END)>, <&kp LS(PG_DN)>; 
+            bindings = <&kp DOWN>, <&kp LC(DOWN)>, <&kp LS(LC(DOWN))>; 
+        };
+
+        sup_ho: home_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp HOME>, <&kp LS(HOME)>;
+        };
+        
+        sup_en: end_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp END>, <&kp LS(END)>;
         };
 
         sup_pu: page_up_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp PG_UP>, <&kp LC(PG_UP)>;
+            bindings = <&kp PG_UP>, <&kp LC(PG_UP)>, <&kp LS(PG_UP)>;
         };
 
         sup_pd: page_down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp PG_DN>, <&kp LC(PG_DN)>;
+            bindings = <&kp PG_DN>, <&kp LC(PG_DN)>, <&kp LS(PG_DN)>;
         };
 
         // THUMB CLUSTER TAP DANCE
@@ -408,7 +423,7 @@
             bindings = <
             &kp F10         &kp F9          &kp F8              &kp F7              &kp F6                  &tog MAC        &kp C_BRI_UP    &kp C_BRI_DN    &kp C_BRI_MIN   &none
             &kp F1          &kp F2          &kp F3              &kp F4              &kp F5                  &tog QWE        &kp C_VOL_UP    &kp C_VOL_DN    &kp C_MUTE      &none
-            &kp F15         &kp F14         &kp F13             &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
+            &kp LGUI        &kp LCTRL       &kp LSHFT           &kp F12             &kp F11                 &none           &kp C_PREV      &kp C_NEXT      &kp C_PP        &none
                                                                 &trans              &sl REV                 &none           &trans
             >;
         };
