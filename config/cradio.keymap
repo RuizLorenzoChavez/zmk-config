@@ -209,28 +209,28 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>; 
+            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>, <&kp LG(LEFT); 
         };
 
         sup_rt: right_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp RIGHT>, <&kp LC(RIGHT)>, <&kp LS(LC(RIGHT))>; 
+            bindings = <&kp RIGHT>, <&kp LC(RIGHT)>, <&kp LS(LC(RIGHT))>, <&kp LG(RIGHT)>; 
         };
 
        sup_up: up_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp UP>, <&kp LC(UP)>, <&kp LS(LC(UP))>; 
+            bindings = <&kp UP>, <&kp LC(UP)>, <&kp LS(LC(UP))>, <&kp LG(UP)>; 
         };
 
         sup_dn: down_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp DOWN>, <&kp LC(DOWN)>, <&kp LS(LC(DOWN))>; 
+            bindings = <&kp DOWN>, <&kp LC(DOWN)>, <&kp LS(LC(DOWN))>, <&kp LG(DOWN)>; 
         };
 
         sup_ho: home_dance {
