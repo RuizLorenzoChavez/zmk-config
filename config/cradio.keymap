@@ -209,7 +209,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>, <&kp LG(LEFT); 
+            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp LS(LC(LEFT))>, <&kp LG(LEFT)>; 
         };
 
         sup_rt: right_dance {
