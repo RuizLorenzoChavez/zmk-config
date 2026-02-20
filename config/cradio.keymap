@@ -23,9 +23,8 @@
 
 // Sticky keys config
 &sk {
-    release-after-ms = <1000>;
+    release-after-ms = <500>;
     quick-release;
-    lazy;
     ignore-modifiers;
 };
 
@@ -217,7 +216,7 @@
             bindings = <&kp RIGHT>, <&kp LC(RIGHT)>, <&kp LS(LC(RIGHT))>, <&kp LG(RIGHT)>; 
         };
 
-       sup_up: up_dance {
+        sup_up: up_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
