@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 // Default mouse scroll and movement speeds
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 800  
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20  
 
 #include <behaviors.dtsi>
@@ -233,6 +233,34 @@
             bindings = <&kp DOWN>, <&kp LC(DOWN)>, <&kp LS(LC(DOWN))>, <&kp LG(DOWN)>; 
         };
 
+        sup_mlf: left_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp LEFT>, <&kp LA(LEFT)>, <&kp LS(LA(LEFT))>, <&kp LC(LA(LEFT))>; 
+        };
+
+        sup_mrt: right_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp RIGHT>, <&kp LA(RIGHT)>, <&kp LS(LA(RIGHT))>, <&kp LC(LA(RIGHT))>; 
+        };
+
+       sup_mup: up_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp UP>, <&kp LA(UP)>, <&kp LS(LA(UP))>, <&kp LC(LA(UP))>; 
+        };
+
+        sup_mdn: down_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <300>;
+            bindings = <&kp DOWN>, <&kp LA(DOWN)>, <&kp LS(LA(DOWN))>, <&kp LC(LA(DOWN))>; 
+        };
+
         sup_ho: home_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -352,7 +380,7 @@
             display-name = "_MAC";
             bindings = <
             &kp Q           &kp W           &kp F               &kp P               &kp G                   &kp J           &kp L           &kp U           &kp Y           &kp SEMI
-            &hml LALT A     &hml LCTRL R    &hml LGUI S         &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RGUI E     &hmr RCTRL I    &hmr RALT O
+            &hml LCTRL A    &hml LALT R    &hml LGUI S         &hml LSHFT T        &hmc 0 D                &hmc 0 H        &hmr RSHFT N    &hmr RGUI E     &hmr RALT I     &hmr RCTRL O
             &kp Z           &kp X           &kp C               &kp V               &kp B                   &kp K           &kp M           &duo            &uno            &marks
                                                                 &ltc FUN TAB        &ltc NUM SPACE          &ltc SYM ENTER  &mtap MAV 0
             >;
@@ -413,7 +441,7 @@
             bindings = <
             &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
             &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LG(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
-            &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp DEL         &kp LG(DOWN)    &kp LG(V)
+            &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp LG(BSPC)    &kp LG(DOWN)    &kp LG(V)
                                                                 &trans              &kp LGUI                &none           &trans
             >;
         };
