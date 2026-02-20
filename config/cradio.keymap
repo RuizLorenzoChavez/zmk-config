@@ -439,8 +439,8 @@
         MAV_layer {
             display-name = "_MAV";
             bindings = <
-            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_up         &kp LG(RIGHT)   &kp LG(A)
-            &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LG(C)       &sup_lf         &sup_dn         &sup_rt         &kp LSHFT
+            &mkp MB2        &mkp MB4        &mmv MOVE_UP        &mkp MB5            &none                   &kp LG(X)       &kp LG(LEFT)    &sup_mup        &kp LG(RIGHT)   &kp LG(A)
+            &mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MB3                &kp LG(C)       &sup_mlf        &sup_mdn        &sup_mrt         &kp LSHFT
             &msc SCRL_LEFT  &msc SCRL_RIGHT &msc SCRL_DOWN      &msc SCRL_UP        &none                   &kp PSCRN       &kp LG(UP)      &kp LG(BSPC)    &kp LG(DOWN)    &kp LG(V)
                                                                 &trans              &kp LGUI                &none           &trans
             >;
